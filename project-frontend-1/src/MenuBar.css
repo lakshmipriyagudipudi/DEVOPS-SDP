@@ -1,0 +1,68 @@
+.menubar {
+  display: flex;
+  align-items: center;
+  height: 55px;
+  background: linear-gradient(to right, #ffffff, #007bff);
+  padding: 0 25px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+/* MENU / hamburger section */
+.menuLogo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14pt;
+  cursor: pointer;
+  margin-right: 40px;
+  transition: 0.3s;
+}
+
+/* menu icon */
+.menuLogo img {
+  width: 24px;
+  margin-right: 8px;
+}
+
+/* Hover animation */
+.menuLogo:hover {
+  transform: scale(1.05);
+}
+
+/* Tabs container */
+.menuTabs {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menuTabs li {
+  font-size: 14pt;
+  cursor: pointer;
+  padding: 7px 10px;
+  border-radius: 6px;
+  transition: 0.25s;
+}
+
+/* On hover */
+.menuTabs li:hover {
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+}
+
+/* Active tab */
+.menuTabs li.active {
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.24);
+}
+
+/* Spread menu items across full width */
+.fullWidth {
+  flex: 1;
+  display: flex;
+  justify-content: space-evenly;
+}

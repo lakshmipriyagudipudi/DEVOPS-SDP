@@ -1,0 +1,186 @@
+.JPContainer {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, #ffffff, #0255fd);
+}
+
+/* ---------- HEADER ---------- */
+.JPContainer .header {
+    width: 100%;
+    height: 35px;
+    color: white;
+    background-color: #1372e6;
+    line-height: 35px;
+}
+.JPContainer .header label {
+    margin-left: 10px;
+    font-size: 12pt;
+    font-weight: bold;
+    float: left;
+}
+
+/* ---------- CONTENT ---------- */
+.JPContainer .content {
+    width: 100%;
+    min-height: calc(100% - 70px);
+    padding-bottom: 20px; /* removes huge gap and keeps spacing clean */
+    overflow-y: auto;
+}
+
+/* ---------- FOOTER ---------- */
+.JPContainer .footer {
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    background: linear-gradient(to bottom right, #ffffff, #0255fd);
+}
+.JPContainer .footer button {
+    width: 75px;
+    height: 30px;
+    font-size: 12pt;
+    color: white;
+    background: rgb(13, 150, 104);
+    border: none;
+    border-radius: 2px;
+    float: right;
+    margin-right: 10px;
+}
+.JPContainer .footer button:hover {
+    cursor: pointer;
+    background: rgb(13, 180, 104);
+}
+
+/* ---------- POPUP BACKDROP ---------- */
+.JPContainer .popup {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.35);
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center; /* center vertically */
+    display: none;
+}
+
+/* ---------- POPUP WINDOW ---------- */
+.JPContainer .popup .popupwindow {
+    width: 480px;
+    max-height: 90vh;
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+/* ---------- POPUP HEADER ---------- */
+.JPContainer .popup .popupwindow .popupheader {
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    background: #2D7ABE;
+    color: white;
+}
+.JPContainer .popup .popupwindow .popupheader label {
+    float: left;
+    font-weight: bold;
+    padding-left: 10px;
+}
+.JPContainer .popup .popupwindow .popupheader span {
+    float: right;
+    font-size: 16pt;
+    cursor: pointer;
+    padding-right: 10px;
+}
+
+/* ---------- POPUP CONTENT ---------- */
+.JPContainer .popup .popupwindow .popupcontent {
+    padding: 10px;
+    width: calc(100% - 20px);
+    max-height: calc(90vh - 85px);
+    overflow-y: auto;
+    background: white;
+}
+.JPContainer .popup .popupwindow .popupcontent label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+.JPContainer .popup .popupwindow .popupcontent input,
+.JPContainer .popup .popupwindow .popupcontent select,
+.JPContainer .popup .popupwindow .popupcontent textarea {
+    width: 100%;
+    margin-top: 3px;
+    border: 1px solid #b5b5b5;
+    border-radius: 4px;
+}
+
+/* ADD BUTTON */
+.JPContainer .popup .popupwindow .popupcontent button {
+    margin-top: 10px;
+    width: 85px;
+    height: 32px;
+    font-size: 12pt;
+    color: white;
+    background: #0741ff;
+    border: none;
+    border-radius: 3px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.JPContainer .popup .popupwindow .popupcontent button:hover {
+    cursor: pointer;
+    background: rgb(13, 180, 104);
+}
+
+/* ---------- RESULTS CARDS ---------- */
+.JPContainer .content .result {
+    margin: 20px;
+    padding: 10px;
+    width: calc(100% - 60px);
+    background: linear-gradient(to bottom right, #ffffff, #005bea);
+    border-radius: 10px;
+    height: 185px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.JPContainer .content .result .div1 {
+    width: 100%;
+    height: 30px;
+    font-size: 10pt;
+    text-decoration: underline;
+    font-weight: bold;
+}
+.JPContainer .content .result .div2 {
+    width: 100%;
+    height: 60px;
+    line-height: 20px;
+    font-size: 9pt;
+    color: gray;
+}
+.JPContainer .content .result .div2 p {
+    margin: 0;
+    color: #ffffff;
+    font-weight: 550;
+}
+.JPContainer .content .result .div2 span,
+.JPContainer .content .result .div3 span {
+    font-weight: bold;
+    color: black;
+}
+.JPContainer .content .result .div3 {
+    width: 100%;
+    height: 45px;
+    line-height: 35px;
+    background: linear-gradient(to right, #ffffff, #e0f7fa);
+    font-size: 9pt;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+.JPContainer .content .result .div1 img {
+    width: 20px;
+    float: right;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+.JPContainer .content .result .div1 img:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
