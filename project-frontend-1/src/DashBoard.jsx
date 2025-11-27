@@ -30,7 +30,7 @@ export default class DashBoard extends Component {
     }
 
     const data = JSON.stringify({ csrid: csr });
-    callApi("POST", "http://localhost:8087/users/getfullname", data, this.fullnameResponse);
+    callApi("POST", "http://localhost:3/users/getfullname", data, this.fullnameResponse);
   }
 
   fullnameResponse(response) {
