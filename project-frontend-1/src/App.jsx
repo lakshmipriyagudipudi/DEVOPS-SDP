@@ -124,7 +124,7 @@ class App extends Component {
 
         });
 
-        callApi("POST", "http://localhost:8087/users/signup", data, this.getResponse);
+        callApi("POST", "http://localhost:30025/users/signup", data, this.getResponse);
 
     }
 
@@ -152,7 +152,7 @@ class App extends Component {
             username.focus();
             return;
         }
-        let url = "http://localhost:8087/users/forgetpassword/"+username.value;
+        let url = "http://localhost:30025/users/forgetpassword/"+username.value;
         callApi("GET", url, "", this.forgetPasswordResponse);
     
     }
@@ -192,7 +192,7 @@ class App extends Component {
             email:username.value,
             password:password.value
         });
-        callApi("POST", "http://localhost:8087/users/signin", data, this.signinResponse);
+        callApi("POST", "http://localhost:30025/users/signin", data, this.signinResponse);
     }
     signinResponse(res)
     {
