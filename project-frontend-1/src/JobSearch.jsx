@@ -27,7 +27,7 @@ export default class JobSearch extends Component {
   }
 
   componentDidMount() {
-    callApi("GET", "http://localhost:8087/jobs/readjob", null, this.readJobsResponse);
+    callApi("GET", "http://localhost:30025/jobs/readjob", null, this.readJobsResponse);
   }
 
   readJobsResponse(res) {
