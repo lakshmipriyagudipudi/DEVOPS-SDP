@@ -21,7 +21,7 @@ class JobPosting extends Component {
         this.savejobResponse = this.savejobResponse.bind(this);
     }
 componentDidMount() {
-        callApi("GET", "http://localhost:8087/jobs/readjob", null, this.readJobsResponse);
+        callApi("GET", "http://localhost:30025/jobs/readjob", null, this.readJobsResponse);
     }
     readJobsResponse(res)
     {
@@ -39,9 +39,9 @@ componentDidMount() {
     saveJobDetails() {
         let data = JSON.stringify(this.state);
         if (this.state.id === '')
-            callApi("POST", "http://localhost:8087/jobs/insert", data, this.savejobResponse);
+            callApi("POST", "http://localhost:30025/jobs/insert", data, this.savejobResponse);
         else
-            callApi("PUT", "http://localhost:8087/jobs/update", data, this.savejobResponse);
+            callApi("PUT", "http://localhost:30025/jobs/update", data, this.savejobResponse);
     }
     savejobResponse(res)
     {
@@ -60,7 +60,7 @@ componentDidMount() {
 
 
    updateJob(id) {
-        callApi("GET", "http://localhost:8087/jobs/getjob/" + id, "", this.updateJobResponse);
+        callApi("GET", "http://localhost:30025/jobs/getjob/" + id, "", this.updateJobResponse);
     }
 
     updateJobResponse(res)
@@ -87,7 +87,7 @@ deleteJob(id) {
         let resp = window.confirm("Are you sure you want to delete this job?");
         if (resp === true) {
             
-            callApi("DELETE", "http://localhost:8087/jobs/delete/" + id, "", this.savejobResponse);
+            callApi("DELETE", "http://localhost:30025/jobs/delete/" + id, "", this.savejobResponse);
         } else {
             alert("Job not deleted.");
             return;
